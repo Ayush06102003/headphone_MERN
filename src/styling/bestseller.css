@@ -1,0 +1,141 @@
+main h1{
+    padding-top:20px;
+    padding-left: 30px;
+}
+main span{
+    color:rgb(120, 20, 20);
+    text-decoration:underline rgba(0, 0, 0, 0.741);
+}
+.sec2{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.wrap{
+   
+    display: FLEX;
+    overflow-x:scroll ;
+
+
+}
+
+
+
+.scroll-image{
+    
+    border-radius: 2px solid;
+    margin-right:30px;
+    margin-top: 20px;
+    padding-left: 30px;
+    width:300px;
+    justify-content: space-between;
+    
+}
+
+.scroll-image .description h2{
+    padding-top:25px;
+    padding-left: 15px ;
+    font-weight: bold;
+    margin:5px
+    
+    
+}
+.scroll-image .description p{
+    padding-left: 15px ;
+    margin:5px;
+}
+.scroll-image .description button{
+    background-color: black;
+    color: antiquewhite;
+    font-size: 15px;
+    margin-bottom: 40px;
+    float: right;
+}
+.scroll-image .description button:hover{
+    transition: none;
+    transform: none;
+    background-color: rgb(102, 94, 94);
+    color: black;
+}
+.scroll-image img{
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+
+
+}
+.scroll-image img:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.wrap ::-webkit-scrollbar-button{
+    color: yellow;
+
+}
+
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    
+    
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width:120px;
+    height:380px;
+    text-align: center;
+    background-color: #4a4a4a53;
+    padding: 20px;
+    margin: 20px;
+    border: 1px black solid;
+    border-radius: 5px;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.box h3{
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.box img {
+    mix-blend-mode: multiply;
+    padding-top: 10%;
+    height: auto;
+    width: auto;
+    margin: 0px;
+}
+
+.box p{
+    margin-bottom: 10%;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration:solid;
+}
+.box:hover {
+    transform: translateY(-20px);
+
+}
+
+.box p:hover{
+    color:brown
+}
+#infobox{
+    background-color: cadetblue;
+    width: 200px;
+    height: 400px;
+    font-size: 1.4rem;
+}
+#infobox h3{
+    font-size: 1.5rem;
+    font-weight: 1000;
+}

@@ -1,0 +1,84 @@
+.navbar{
+    display: flex;
+    align-items:center ;
+    justify-content:space-between ;
+    background-color:white;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+.logo{
+    padding-left: 20px;
+    font-size: 30px;
+
+
+}
+span{
+    color: red;
+}
+.navbar ul{
+    list-style-type:None;
+    margin:0px ;
+    padding: 0px;
+    
+    overflow: hidden;
+}
+.navbar a{
+    color:rgb(153, 18, 18);
+    text-decoration: none;
+    display: block;
+    font-style: bold;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.navbar a:hover{
+    background-color: hsla(0, 0%, 0%, 0.318);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.navbar li{
+    display: inline-block;
+    padding: 10px ;
+}
+button{
+    border: none;
+    background-color: rgba(16, 219, 219, 0.84);
+    padding: 10px 20px;
+    border-radius:20px ;
+    
+    font-size: 20px;
+    transition:0.3s;
+    
+     
+}
+button:hover{
+    background-color: rgba(16, 219, 219, 0.485);
+    border: none;
+    transform:scale(1.2);
+    cursor:pointer;
+}
+.dropmenu{
+    display: none;
+    z-index: 1000;
+
+}
+.navbar ul li:hover .dropmenu{
+    display:block;
+    position:absolute;
+    background-color:white;
+    
+    margin-top:5px;
+    margin-left: -15px;
+}
+.navbar ul li:hover .dropmenu li{
+    display:block;
+    border-radius:0 ;
+    width:150px;
+    background:transparent;
+    text-align: left;
+    padding:10px;
+    border-bottom:1px dotted  ;
+}
