@@ -1,17 +1,15 @@
 
 const express = require('express');
-const dbConnection = require('./dbConnection');
+
 const DataRoute = require('./Routes/DataRoute');
 const AuthRoute = require('./Routes/Register');
+const ConnectToMongo = require('./dbConnection');
 
 const app = express();
 const PORT = 8000;
 
 //database
-dbConnection.on('error', console.error.bind(console, 'MongoDB connection error:'));
-dbConnection.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+ConnectToMongo();
 
 
 app.use(express.json());
