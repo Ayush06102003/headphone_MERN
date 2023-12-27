@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const User = require("../user")
+const User = require("../models/user")
 const { body, validationResult } = require('express-validator');
 const { hashPass, comparePassword } = require('../helper/hashpass');
-const { findOne } = require('../item');
+const { findOne } = require('../models/item');
 
 router.post("/register", [
   body('name', 'Please fill this field').notEmpty(),

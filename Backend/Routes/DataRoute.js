@@ -1,6 +1,6 @@
 // Routes/DataRoute.js
 const express = require('express');
-const Item = require("../item")
+const Item = require("../models/item")
 
 const router = express.Router();
 

@@ -1,6 +1,5 @@
 
 const express = require('express');
-
 const DataRoute = require('./Routes/DataRoute');
 const AuthRoute = require('./Routes/Register');
 const ConnectToMongo = require('./dbConnection');
