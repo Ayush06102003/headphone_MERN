@@ -2,6 +2,7 @@
 const express = require('express');
 const DataRoute = require('./Routes/DataRoute');
 const AuthRoute = require('./Routes/Register');
+const cors = require("cors");
 const ConnectToMongo = require('./dbConnection');
 
 const app = express();
@@ -10,7 +11,7 @@ const PORT = 8000;
 //database
 ConnectToMongo();
 
-
+app.use(cors());
 app.use(express.json());
 
 
