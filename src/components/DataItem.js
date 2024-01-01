@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import '../styling/style.css';
-function DataItem(props) {
+import DataContext from '../context/data/dataContext';
 
+function DataItem(props) {
+    const context = useContext(DataContext);
+    const {getbyId} = context
     const { item } = props;
     const ImageUrl = `newimages/${item.imgUrl}.png`;
-    console.log(ImageUrl)
+
+
+    
     return (
         <div>
 
@@ -20,8 +25,8 @@ function DataItem(props) {
                     <div className="star">
                         <i className="fas fa-star"><span>{item.rating}</span></i>
                     </div>
-                    <button type="button">
-                        Buy Now
+                    <button type="button" onClick={()=>{getbyId(item._id)}}>
+                        Add to Cart
                     </button>
                 </div>
             </div>

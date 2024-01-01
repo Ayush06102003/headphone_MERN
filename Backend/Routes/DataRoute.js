@@ -27,4 +27,17 @@ router.get('/fetchall', async (req,res)=>{
   }
 })
 
+router.get('/getbyId/:id', async (req,res)=>{
+  try {
+    let data = await Item.findById(req.params.id)
+    if(!data){
+      return res.status(404).send('product not found')
+    }
+    res.json(data)
+  } catch (error) {
+    console.error(error.message);
+        res.status(500).send("Internal server Error");
+  }
+})
+
 module.exports = router;

@@ -9,9 +9,11 @@ import Wireless from './components/Wireless';
 import Speaker from './components/Speaker';
 import Allproducts from './components/Allproducts';
 import Cart from './components/Cart';
+import DataState from './context/data/dataState';
 function App() {
   return (
     <>
+    <DataState>
     <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -25,6 +27,7 @@ function App() {
       </Routes>
       <Footer/>
     </BrowserRouter>
+    </DataState>
       
     </>
   );
