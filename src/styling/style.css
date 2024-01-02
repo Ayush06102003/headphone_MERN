@@ -60,7 +60,7 @@ button{
     padding: 10px 20px;
     border-radius:20px ;
     
-    font-size: 20px;
+    
     transition:0.3s;
     
      
@@ -352,7 +352,7 @@ main span{
 .row2 .exb:hover{
     background-color: rgb(20, 87, 88) ;
 }
-/* CART PAGE (MAY OR MAY NOT USE JS) */
+/* CART PAGE (MAY OR MAY NOT USE JS)
 .cart{
     margin: 90px;
 }
@@ -397,7 +397,168 @@ td{
 .totalsum {
     display: flex;
     justify-content:flex-end;
+} */
+
+/* Modify the .cart table CSS */
+.cart .pcart {
+    width: 80%; /* Adjust the width as needed */
+    margin: auto;
+    background-color: #f1fce584;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;/* Center the table */
 }
+.pcart thead{
+    
+    border-bottom: black 2px solid;
+}
+.pcart th{
+    
+    color: black;
+    text-align: center;
+    padding:20px 40px;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.pcart td{
+    margin: 10%;
+    padding-left: 40px;
+}
+
+/* Increase the width of the product info column */
+.pcart td:first-child {
+    width: max-content
+}
+
+
+td.price{
+    font-size: 1.5rem;
+    width: max-content;
+}
+td.quantity input{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px black solid;
+    font-weight: bold;
+}
+td.quantity .mbutton,
+td.quantity .pbutton {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px black solid;
+    padding: 0px 0px;
+    border-radius: 0px;
+    background-color: rgb(196, 196, 196);
+}
+
+
+
+td.quantity .mbutton {
+    margin-right: 2px;
+}
+
+td.quantity .pbutton {
+    margin-left: 2px; 
+}
+td.remove{
+    padding-right: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+/* Adjust the product info layout */
+.cart .product-info {
+    display: flex;
+    align-items: center;
+}
+.cart .product-info1{
+    width: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.cart img {
+    width: 250px;
+    height: 250px; 
+    padding: 0px;
+     
+}
+
+.totalsum {
+    margin: 5% 10% 5%;
+    border: 2px black solid;
+    height: 200px;
+    width: 550px
+    
+}
+.totalsum th{
+    padding-left: 10%;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.totalsum tr{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif    ;
+    margin-bottom: 20px;
+    border-top: rgb(255, 255, 255) solid 5px;
+    border-bottom: rgb(255, 255, 255) solid 2px;
+    background-color: #ebf0e4;
+}
+
+.totalsum td{
+    padding-left: 30px;
+    font-size: 1.2rem;
+    
+}
+.totalsum .checkout{
+    width: 50%;
+    padding: 0px;
+    height:40px;
+    margin-left: 45%;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+/* Make the table responsive */
+@media (max-width: 768px) {
+    
+
+    .cart td {
+        padding: 50px;
+        display: inline;
+        text-align: center;
+    }
+    .pcart img{
+        width: 80%;
+    }
+    .cart th{
+        display: none;
+        flex-direction: column;
+    }
+
+    .pcart{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart .product-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subtotal{
+        width: max-content;
+    }
+}
+
 section padding{
     padding: 40px 80px ;
 }
@@ -411,14 +572,16 @@ section padding{
     font-size: xx-large;
 }
 
-.all-products .products{
+.all-products .products {
     box-sizing: content-box;
     display: flex;
     justify-content: space-between;
-    flex-wrap:wrap ;
-    padding-top:20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
     overflow: hidden;
 } 
+
+
 .all-products .pro1{
     overflow: hidden;
     position: relative;
