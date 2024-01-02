@@ -31,9 +31,14 @@ function Cart() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
+  
+
+
   let subtotal = 0;
+  let finalprice =0;
   cart.forEach((product)=> {
     subtotal+= (product.quantity || 1)*(product.price)
+    finalprice = ((product.price)*(product.quantity || 1))|| product.price;
     
   });
 
@@ -73,8 +78,9 @@ function Cart() {
                     type="button"className="pbutton"
                     onClick={() => handleQuantityChange(product._id, 1)}>+</button>
                 </td>
+                {/*  */}
+                <td className="price">₹{(product.quantity * parseInt(product.price) || product.price)}</td>
 
-                <td className="price">₹{product.quantity * product.price}</td>
                 <td className="remove">
                   <i className="fa-solid fa-trash" onClick={() => deleteitem(product._id)}></i>
                 </td>
