@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Allproducts from './components/Allproducts';
 import Cart from './components/Cart';
 import DataState from './context/data/dataState';
+import Login from './components/Login';
 function App() {
   return (
     <>
@@ -21,7 +22,8 @@ function App() {
         <Route exact path='/wireless' element={<Allproducts category="wireless"/>}/>
         <Route exact path='/speaker' element={<Allproducts category="speaker"/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
-
+        <Route exact path='/login' element={<Login/>}/>
+        
       </Routes>
       <Footer/>
     </BrowserRouter>

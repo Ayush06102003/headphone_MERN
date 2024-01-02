@@ -1,7 +1,13 @@
 import React from 'react';
 import '../styling/style.css'
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
+
 function Navbar() {
+  const navigate = useNavigate()
+  const handlelogout = ()=>{
+    localStorage.removeItem('token');
+    navigate('/login')
+  }
   return (
     <>
       <div className="hero">
@@ -27,7 +33,9 @@ function Navbar() {
               </Link>
             </li>
           </ul>
-          <button type="button" className="navb">Login/Signup</button>
+          {!localStorage.getItem('token')?<Link to="/login"><button type="button" className="navb">Login/Signup</button></Link>
+          :<button type="button" onClick={handlelogout} className="navb">Logout</button>}
+
         </nav>
       </div>
     </>
