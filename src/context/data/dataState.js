@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import DataContext from './dataContext'
 function DataState(props) {
   const host = "http://localhost:8000"
@@ -24,12 +24,18 @@ function DataState(props) {
       const response = await fetch(`${host}/getbyId/${id}`);
       const product = await response.json();
       console.log('Fetched data:', product);
-      setCart((prevCart) => [...prevCart, product])
-      
+  
+      // Check if the product is already in the cart
+      const isProductInCart = cart.some((item) => item._id === product._id);
+  
+      if (!isProductInCart) {
+        setCart((prevCart) => [...prevCart, product]);
+      }
     } catch (error) {
       console.error('Error fetching data:', error);
     }
   };
+  
 
   const deleteitem = (id)=>{
     const updatedcart = cart.filter((item)=>{

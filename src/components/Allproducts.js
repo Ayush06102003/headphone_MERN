@@ -3,9 +3,9 @@ import '../styling/style.css';
 import DataItem from './DataItem';
 import DataContext from '../context/data/dataContext';
 
-function Allproducts({ category }) {
+function Allproducts({ category, showAlert }) {
   const { data, getdata } = useContext(DataContext);
-
+ 
   useEffect(() => {
     getdata();
     // eslint-disable-next-line
@@ -21,7 +21,7 @@ function Allproducts({ category }) {
         <div className="products">
           {type.length === 0 && 'No products to display'}
           {type.map((item) => {
-            return <DataItem key={item._id} item={item} />;
+            return <DataItem key={item._id} item={item} showAlert={showAlert} />;
           })}
         </div>
       </section>
